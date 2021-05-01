@@ -1,0 +1,106 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #242428;
+}
+.wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: #f4f4f8;
+    margin-left: 20vw;
+    font-size: 4rem;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+h1::before {
+    content: "SKILLS";
+    position: absolute;
+    top: 20%;
+    left: 0;
+    font-size: 10rem;
+    color: #2b2b2b;
+    z-index: -2;
+    pointer-events: none;
+  }
+.container {
+    position: absolute;
+    top: 25vh;
+    left: 20vw;
+    width: 400px;
+    display: grid;
+    grid-gap: 0.2rem;
+    grid-template-columns: 20fr 20fr;
+    grid-template-rows: repeat(auto-fit);
+    z-index: 1;
+}
+
+.card {
+    position: relative;
+    
+    height: 200px;
+    cursor: pointer;
+    background-color: transparent;
+    perspective: 300px;
+  }
+  
+  .card h2 {
+    font-size: 15px;
+    border-bottom: 1px #fff solid;
+    z-index: 10;
+  }
+  
+  .card img {
+    height: 200px;
+    object-fit: contain;
+  }
+  
+  .card-inner {
+    height: 200px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    height: 200px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .card-back {
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transform: rotateY(180deg);
+    place-items: center;
+  }
+  
+  h3 {
+      position: relative;
+      color: #f4f4f8;
+  }
+  a {
+      text-decoration: none;
+      color: #f4f4f8;
+      text-shadow: 1px 1px 2px rgba(167, 167, 167, 0.918);
+  }
+  
